@@ -1,0 +1,6 @@
+flask
+flask_restful
+gunicorn
+pyTelegramBotAPI
+random_word
+deep-translator
