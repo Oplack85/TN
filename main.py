@@ -58,7 +58,7 @@ def start(message):
         InlineKeyboardButton("ترجمة النصوص", callback_data='toggle_translation'),
         InlineKeyboardButton("🌟 نجماتي", callback_data='my_coins')
     )
-    bot.send_message(message.chat.id, f"*[𝗟𝗻 𝗧𝗿𝗮𝗻𝘀 📗](t.me/Scorpion_scorp)\n\n✎┊‌ مرحباً بك في بوت اللغة الانجليزية \n✎┊‌ يعطي هذا البوت كلمات انجليزية على مستويات عديده مع امكانية ترجمة نصوص متعددة ✓*\n\n*اختر مستوى الصعوبة:*", reply_markup=markup, disable_web_page_preview=True)
+    bot.send_message(message.chat.id, f"[𝗟𝗻 𝗧𝗿𝗮𝗻𝘀 📗](t.me/Scorpion_scorp)\n\n*✎┊‌ مرحباً بك في بوت اللغة الانجليزية \n✎┊‌ يعطي هذا البوت كلمات انجليزية على مستويات عديده مع امكانية ترجمة نصوص متعددة ✓*\n\n*اختر مستوى الصعوبة:*", reply_markup=markup, disable_web_page_preview=True)
 
 # معالجة اختيار مستوى الصعوبة
 @bot.callback_query_handler(func=lambda call: call.data in ['easy', 'medium', 'hard'])
