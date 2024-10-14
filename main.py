@@ -112,6 +112,9 @@ def handle_message(message):
     elif translation_enabled.get(user_id, False):  # ترجمة النص إذا كانت الترجمة مفعلة
         translated_text = translator.translate(message.text)
         bot.send_message(message.chat.id, f'*ترجمة النص:\n- {translated_text}*')
+    else:
+        # إرسال رسالة توضح أن الإجابة غير صحيحة مع عرض الترجمة الصحيحة
+        bot.send_message(message.chat.id, f'*إجابة غير صحيحة! ✖️ الترجمة الصحيحة للكلمة "{current_word}" هي: {translation}.*')
 
 # ترجمة الكلمة وعرض زر "كلمة أخرى"
 @bot.callback_query_handler(func=lambda call: call.data == 'translate')
@@ -141,4 +144,3 @@ def another_word(call):
 
 # بدء البوت
 bot.polling()
-    
